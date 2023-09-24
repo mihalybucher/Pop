@@ -39,6 +39,16 @@ public class ModBlocks {
     public static final RegistryObject<Block> POLISHED_GREEN_STONE_BRICKS =
             registerBlock("polished_green_stone_bricks", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()));
 
+    //sandstone bricks
+    public static final RegistryObject<Block> SANDSTONE_BRICKS =
+            registerBlock("sandstone_bricks", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> POLISHED_SANDSTONE_BRICKS =
+            registerBlock("polished_sandstone_bricks", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()));
+
+
+
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
 
         RegistryObject toReturn = BLOCKS.register(name, block);
