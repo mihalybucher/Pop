@@ -19,10 +19,9 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, PrinceOfPersia.MOD_ID);
 
-
+    //blue stone bricks
     public static final RegistryObject<Block> BLUE_STONE_BRICKS =
             registerBlock("blue_stone_bricks", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()));
-
 
     public static final RegistryObject<Block> POLISHED_BLUE_STONE_BRICKS =
             registerBlock("polished_blue_stone_bricks", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()));
@@ -32,6 +31,13 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> CRACKED_BLUE_STONE_BRICKS =
             registerBlock("cracked_blue_stone_bricks", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()));
+
+    //green stone bricks
+    public static final RegistryObject<Block> GREEN_STONE_BRICKS =
+            registerBlock("green_stone_bricks", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> POLISHED_GREEN_STONE_BRICKS =
+            registerBlock("polished_green_stone_bricks", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
 
