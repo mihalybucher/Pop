@@ -5,6 +5,7 @@ import com.neon.pop.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -46,6 +47,15 @@ public class ModBlocks {
     public static final RegistryObject<Block> POLISHED_SANDSTONE_BRICKS =
             registerBlock("polished_sandstone_bricks", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()));
 
+    //walls and pillars
+    public static final RegistryObject<Block> BLUE_STONE_BRICK_PILLAR =
+            registerBlock("blue_stone_brick_pillar", () -> new PillarBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> GREEN_STONE_BRICK_PILLAR =
+            registerBlock("green_stone_brick_pillar", () -> new PillarBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> SANDSTONE_BRICK_PILLAR =
+            registerBlock("sandstone_brick_pillar", () -> new PillarBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()));
 
 
 
