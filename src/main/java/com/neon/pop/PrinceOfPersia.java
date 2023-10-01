@@ -60,6 +60,10 @@ public class PrinceOfPersia
             event.accept(ModBlocks.BLUE_STONE_BRICK_PILLAR);
             event.accept(ModBlocks.GREEN_STONE_BRICK_PILLAR);
             event.accept(ModBlocks.SANDSTONE_BRICK_PILLAR);
+
+            event.accept(ModBlocks.BLUE_STONE_BRICK_PILLAR_TOP);
+            event.accept(ModBlocks.GREEN_STONE_BRICK_PILLAR_TOP);
+            event.accept(ModBlocks.SANDSTONE_BRICK_PILLAR_TOP);
         }
 
 
@@ -79,6 +83,10 @@ public class PrinceOfPersia
             event.accept(ModBlocks.BLUE_STONE_BRICK_PILLAR);
             event.accept(ModBlocks.GREEN_STONE_BRICK_PILLAR);
             event.accept(ModBlocks.SANDSTONE_BRICK_PILLAR);
+
+            event.accept(ModBlocks.BLUE_STONE_BRICK_PILLAR_TOP);
+            event.accept(ModBlocks.GREEN_STONE_BRICK_PILLAR_TOP);
+            event.accept(ModBlocks.SANDSTONE_BRICK_PILLAR_TOP);
         }
     }
 
