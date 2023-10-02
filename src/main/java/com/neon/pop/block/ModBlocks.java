@@ -2,10 +2,12 @@ package com.neon.pop.block;
 
 import com.neon.pop.PrinceOfPersia;
 import com.neon.pop.item.ModItems;
+import net.minecraft.client.particle.Particle;
+import net.minecraft.core.particles.ParticleOptions;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.WallBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -66,6 +68,19 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> SANDSTONE_BRICK_PILLAR_TOP =
             registerBlock("sandstone_brick_pillar_top", () -> new PillarTopBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops()));
+
+    //torch
+    public static final RegistryObject<Block> POP_TORCH =
+            BLOCKS.register("pop_torch_block", () -> new CustomTorchBlock(BlockBehaviour.Properties.of(Material.DECORATION)
+                    .noCollission().instabreak().lightLevel((p_50755_) -> {
+                        return 14;
+                    }).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> POP_WALL_TORCH =
+            BLOCKS.register("pop_wall_torch_block", () -> new CustomWallTorchBlock(BlockBehaviour.Properties.of(Material.DECORATION)
+                    .noCollission().instabreak().lightLevel((p_50886_) -> {
+                        return 14;
+                    }).sound(SoundType.WOOD).dropsLike(POP_TORCH.get())));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){

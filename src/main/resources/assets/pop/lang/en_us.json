@@ -14,5 +14,9 @@
   "block.pop.sandstone_brick_pillar": "Sandstone Brick Pillar",
   "block.pop.blue_stone_brick_pillar_top": "Blue Stone Brick Pillar Top",
   "block.pop.green_stone_brick_pillar_top": "Green Stone Brick Pillar Top",
-  "block.pop.sandstone_brick_pillar_top": "Sandstone Brick Pillar Top"
+  "block.pop.sandstone_brick_pillar_top": "Sandstone Brick Pillar Top",
+  "block.pop.pop_torch_block": "Torch",
+  "block.pop.pop_wall_torch_block": "Wall Torch",
+
+  "item.pop.pop_torch": "Torch"
 }

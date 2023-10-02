@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "pop:block/pop_wall_torch_block"
+    },
+    "facing=north": {
+      "model": "pop:block/pop_wall_torch_block",
+      "y": 270
+    },
+    "facing=south": {
+      "model": "pop:block/pop_wall_torch_block",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "pop:block/pop_wall_torch_block",
+      "y": 180
+    }
+  }
+}
