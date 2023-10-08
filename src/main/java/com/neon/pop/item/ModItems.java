@@ -19,6 +19,9 @@ public class ModItems {
             () -> new StandingAndWallBlockItem(ModBlocks.POP_TORCH.get(),ModBlocks.POP_WALL_TORCH.get(),
                     new Item.Properties(), Direction.DOWN));
 
+    public static final RegistryObject<Item> POP_GATE_ITEM = ITEMS.register("gate_lvl1",
+            () -> new PopGateItem(ModBlocks.POP_GATE_LVL1.get(), new Item.Properties()));
+
 
     public static void register(IEventBus eventBus){
 

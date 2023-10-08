@@ -2,7 +2,10 @@ package com.neon.pop;
 
 import com.mojang.logging.LogUtils;
 import com.neon.pop.block.ModBlocks;
+import com.neon.pop.block.entity.ModBlockEntities;
+import com.neon.pop.block.entity.client.PopGateRenderer;
 import com.neon.pop.item.ModItems;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -14,6 +17,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import software.bernie.geckolib.GeckoLib;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(PrinceOfPersia.MOD_ID)
@@ -30,6 +34,9 @@ public class PrinceOfPersia
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
+
+        GeckoLib.initialize();
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
@@ -66,6 +73,8 @@ public class PrinceOfPersia
             event.accept(ModBlocks.SANDSTONE_BRICK_PILLAR_TOP);
 
             event.accept(ModItems.POP_TORCH);
+
+            event.accept(ModItems.POP_GATE_ITEM);
         }
 
 
@@ -92,6 +101,8 @@ public class PrinceOfPersia
 
             event.accept(ModItems.POP_TORCH);
 
+            event.accept(ModItems.POP_GATE_ITEM);
+
 
         }
     }
@@ -105,7 +116,7 @@ public class PrinceOfPersia
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-
+            BlockEntityRenderers.register(ModBlockEntities.POP_GATE_BLOCK_ENTITY.get(), PopGateRenderer::new);
         }
     }
 }

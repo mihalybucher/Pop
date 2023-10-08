@@ -2,9 +2,6 @@ package com.neon.pop.block;
 
 import com.neon.pop.PrinceOfPersia;
 import com.neon.pop.item.ModItems;
-import net.minecraft.client.particle.Particle;
-import net.minecraft.core.particles.ParticleOptions;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -81,6 +78,11 @@ public class ModBlocks {
                     .noCollission().instabreak().lightLevel((p_50886_) -> {
                         return 14;
                     }).sound(SoundType.WOOD).dropsLike(POP_TORCH.get())));
+
+
+    //gate
+    public static final RegistryObject<Block> POP_GATE_LVL1 =
+            BLOCKS.register("gate_lvl1", () -> new PopGateBlock(BlockBehaviour.Properties.of(Material.STONE).noOcclusion()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){

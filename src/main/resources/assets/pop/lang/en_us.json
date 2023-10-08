@@ -18,5 +18,6 @@
   "block.pop.pop_torch_block": "Torch",
   "block.pop.pop_wall_torch_block": "Wall Torch",
 
-  "item.pop.pop_torch": "Torch"
+  "item.pop.pop_torch": "Torch",
+  "item.pop.gate_lvl1": "Gate Level 1"
 }
