@@ -21,7 +21,7 @@ public class ModItems {
                     new Item.Properties(), Direction.DOWN));
 
     public static final RegistryObject<Item> POP_GATE_ITEM = ITEMS.register("gate_lvl1",
-            () -> new BlockItem(ModBlocks.POP_GATE_LVL1.get(), new Item.Properties()));
+            () -> new PopGateItem(ModBlocks.POP_GATE_LVL1.get(), new Item.Properties()));
 
 
     public static void register(IEventBus eventBus){

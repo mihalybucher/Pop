@@ -1,9 +1,12 @@
 package com.neon.pop.block;
 
 import com.neon.pop.block.entity.PopGateBlockEntity;
+import com.neon.pop.sound.ModSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
@@ -48,17 +51,17 @@ public class PopGateBlock extends BaseEntityBlock {
     @Override
     public void neighborChanged(BlockState state, Level level, BlockPos pos, Block block, BlockPos fromPos, boolean isMoving) {
 
-        if(!level.isClientSide()) {
         boolean isPowered = level.hasNeighborSignal(pos);
         boolean wasPowered = state.getValue(TRIGGERED);
 
+        Player player = level.getNearestPlayer(1,1,1,1,false);
 
-
+        if(!level.isClientSide()) {
         if (isPowered && !wasPowered) {
 
-
-
                 level.setBlock(pos, state.setValue(TRIGGERED, Boolean.valueOf(true)), 3);
+                level.playSound(player, pos, ModSounds.GATE_OPEN.get(), SoundSource.BLOCKS, 1f, 1f);
+
             }
         }
 

@@ -1,0 +1,8 @@
+{
+  "gate_open": {
+    "subtitle": "sounds.pop.gate_open",
+    "sounds": [
+      "pop:gate_open"
+    ]
+  }
+}

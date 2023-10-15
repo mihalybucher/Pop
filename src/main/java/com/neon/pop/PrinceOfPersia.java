@@ -5,6 +5,7 @@ import com.neon.pop.block.ModBlocks;
 import com.neon.pop.block.entity.ModBlockEntities;
 import com.neon.pop.block.entity.client.PopGateRenderer;
 import com.neon.pop.item.ModItems;
+import com.neon.pop.sound.ModSounds;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -35,6 +36,7 @@ public class PrinceOfPersia
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModBlockEntities.register(modEventBus);
+        ModSounds.register(modEventBus);
 
         GeckoLib.initialize();
 
